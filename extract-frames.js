@@ -3,7 +3,7 @@
 var path = require('path'),
 	pkg;
 
-const imageSize = 1920;
+const imageSize = 1080;
 
 if (require.main === module) {
 
