@@ -3,6 +3,8 @@
 var path = require('path'),
 	pkg;
 
+const imageSize = 1920;
+
 if (require.main === module) {
 
 	try {
@@ -339,7 +341,7 @@ async.series([
 				var fullPath = path.join(outDir, file);
 
 				var proc = gm(fullPath)
-					.resize(240)
+					.resize(imageSize)
 					.noProfile();
 
 				if (pushToCloud) {
