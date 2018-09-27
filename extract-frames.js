@@ -3,7 +3,7 @@
 var path = require('path'),
 	pkg;
 
-const imageSize = 1080;
+const imageSize = 720;
 
 if (require.main === module) {
 
@@ -157,7 +157,8 @@ var getTimeString = function (input) {
 }
 
 var buildFileName = function (dir, frame, videoId) {
-	return dir + "/frame.keyframe." + frame + ".%003d.jpg";
+	let timeName = new Date().getTime()
+	return dir + "/frame.keyframe." + timeName + "." + frame + ".%003d.jpg";
 }
 
 var printLog = function () {
